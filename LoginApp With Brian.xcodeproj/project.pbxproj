@@ -7,21 +7,45 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		820418922036B0090030FF5C /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820418912036B0090030FF5C /* Messages.swift */; };
+		821A9730204B9F9100A5E5FF /* ChatMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821A972F204B9F9100A5E5FF /* ChatMessageCell.swift */; };
+		82234F58203DD5BD00736646 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82234F57203DD5BD00736646 /* UserCell.swift */; };
+		8223DF94201474DB0040A09D /* NewMessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8223DF93201474DB0040A09D /* NewMessageController.swift */; };
+		822472B620124C9900165235 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 822472B520124C9900165235 /* GoogleService-Info.plist */; };
+		822496162016B68F00F0B064 /* LogInController+Handler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822496152016B68F00F0B064 /* LogInController+Handler.swift */; };
+		82289A08201F7FDC0047719C /* Extentsion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82289A07201F7FDC0047719C /* Extentsion.swift */; };
+		8279BF26202D91EA0081A1C8 /* ChatLogController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8279BF25202D91EA0081A1C8 /* ChatLogController.swift */; };
 		82AEEED72010F50600F86512 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AEEED62010F50600F86512 /* AppDelegate.swift */; };
-		82AEEED92010F50600F86512 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AEEED82010F50600F86512 /* ViewController.swift */; };
+		82AEEED92010F50600F86512 /* MessagesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AEEED82010F50600F86512 /* MessagesController.swift */; };
 		82AEEEDC2010F50600F86512 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82AEEEDA2010F50600F86512 /* Main.storyboard */; };
 		82AEEEDE2010F50600F86512 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82AEEEDD2010F50600F86512 /* Assets.xcassets */; };
 		82AEEEE12010F50600F86512 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82AEEEDF2010F50600F86512 /* LaunchScreen.storyboard */; };
+		82AEEEE92010F96900F86512 /* LogInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AEEEE82010F96900F86512 /* LogInController.swift */; };
+		82E52E3E2014833700485CD2 /* MyUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E52E3D2014833700485CD2 /* MyUser.swift */; };
+		A98353AE662565B9C9FC6E88 /* Pods_LoginApp_With_Brian.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B6FF74382F874699D64F36C /* Pods_LoginApp_With_Brian.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B6FF74382F874699D64F36C /* Pods_LoginApp_With_Brian.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoginApp_With_Brian.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		336F5133B51893126773CEE9 /* Pods-LoginApp With Brian.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginApp With Brian.release.xcconfig"; path = "Pods/Target Support Files/Pods-LoginApp With Brian/Pods-LoginApp With Brian.release.xcconfig"; sourceTree = "<group>"; };
+		649B46DC404ACF46CC5BEFA8 /* Pods-LoginApp With Brian.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginApp With Brian.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LoginApp With Brian/Pods-LoginApp With Brian.debug.xcconfig"; sourceTree = "<group>"; };
+		820418912036B0090030FF5C /* Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
+		821A972F204B9F9100A5E5FF /* ChatMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageCell.swift; sourceTree = "<group>"; };
+		82234F57203DD5BD00736646 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		8223DF93201474DB0040A09D /* NewMessageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMessageController.swift; sourceTree = "<group>"; };
+		822472B520124C9900165235 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		822496152016B68F00F0B064 /* LogInController+Handler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LogInController+Handler.swift"; sourceTree = "<group>"; };
+		82289A07201F7FDC0047719C /* Extentsion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentsion.swift; sourceTree = "<group>"; };
+		8279BF25202D91EA0081A1C8 /* ChatLogController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLogController.swift; sourceTree = "<group>"; };
 		82AEEED32010F50600F86512 /* LoginApp With Brian.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LoginApp With Brian.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		82AEEED62010F50600F86512 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		82AEEED82010F50600F86512 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		82AEEED82010F50600F86512 /* MessagesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesController.swift; sourceTree = "<group>"; };
 		82AEEEDB2010F50600F86512 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		82AEEEDD2010F50600F86512 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		82AEEEE02010F50600F86512 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		82AEEEE22010F50600F86512 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82AEEEE82010F96900F86512 /* LogInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInController.swift; sourceTree = "<group>"; };
+		82E52E3D2014833700485CD2 /* MyUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyUser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +53,46 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A98353AE662565B9C9FC6E88 /* Pods_LoginApp_With_Brian.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		81D5974F61F451A6F72E7C68 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				649B46DC404ACF46CC5BEFA8 /* Pods-LoginApp With Brian.debug.xcconfig */,
+				336F5133B51893126773CEE9 /* Pods-LoginApp With Brian.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		82234F56203DD58600736646 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				82234F57203DD5BD00736646 /* UserCell.swift */,
+				821A972F204B9F9100A5E5FF /* ChatMessageCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		82289A06201F7FBA0047719C /* HelperFiles */ = {
+			isa = PBXGroup;
+			children = (
+				82289A07201F7FDC0047719C /* Extentsion.swift */,
+			);
+			path = HelperFiles;
+			sourceTree = "<group>";
+		};
 		82AEEECA2010F50600F86512 = {
 			isa = PBXGroup;
 			children = (
 				82AEEED52010F50600F86512 /* LoginApp With Brian */,
 				82AEEED42010F50600F86512 /* Products */,
+				81D5974F61F451A6F72E7C68 /* Pods */,
+				C03857B7C5CAE54ABA03589A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +108,46 @@
 			isa = PBXGroup;
 			children = (
 				82AEEED62010F50600F86512 /* AppDelegate.swift */,
-				82AEEED82010F50600F86512 /* ViewController.swift */,
+				82234F56203DD58600736646 /* Cell */,
+				82289A06201F7FBA0047719C /* HelperFiles */,
+				82AEEEEA2010FA0300F86512 /* Controller */,
+				82E52E3A2014828800485CD2 /* Model */,
 				82AEEEDA2010F50600F86512 /* Main.storyboard */,
 				82AEEEDD2010F50600F86512 /* Assets.xcassets */,
 				82AEEEDF2010F50600F86512 /* LaunchScreen.storyboard */,
 				82AEEEE22010F50600F86512 /* Info.plist */,
+				822472B520124C9900165235 /* GoogleService-Info.plist */,
 			);
 			path = "LoginApp With Brian";
+			sourceTree = "<group>";
+		};
+		82AEEEEA2010FA0300F86512 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				82AEEEE82010F96900F86512 /* LogInController.swift */,
+				822496152016B68F00F0B064 /* LogInController+Handler.swift */,
+				82AEEED82010F50600F86512 /* MessagesController.swift */,
+				8223DF93201474DB0040A09D /* NewMessageController.swift */,
+				8279BF25202D91EA0081A1C8 /* ChatLogController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		82E52E3A2014828800485CD2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				82E52E3D2014833700485CD2 /* MyUser.swift */,
+				820418912036B0090030FF5C /* Messages.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C03857B7C5CAE54ABA03589A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0B6FF74382F874699D64F36C /* Pods_LoginApp_With_Brian.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +157,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 82AEEEE52010F50600F86512 /* Build configuration list for PBXNativeTarget "LoginApp With Brian" */;
 			buildPhases = (
+				721CAC149E4AEF3C35075B07 /* [CP] Check Pods Manifest.lock */,
 				82AEEECF2010F50600F86512 /* Sources */,
 				82AEEED02010F50600F86512 /* Frameworks */,
 				82AEEED12010F50600F86512 /* Resources */,
+				759C12A13CFCD44E79488160 /* [CP] Embed Pods Frameworks */,
+				A6A40233CCC7051261DC115C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -124,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				82AEEEE12010F50600F86512 /* LaunchScreen.storyboard in Resources */,
+				822472B620124C9900165235 /* GoogleService-Info.plist in Resources */,
 				82AEEEDE2010F50600F86512 /* Assets.xcassets in Resources */,
 				82AEEEDC2010F50600F86512 /* Main.storyboard in Resources */,
 			);
@@ -131,12 +221,81 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		721CAC149E4AEF3C35075B07 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LoginApp With Brian-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		759C12A13CFCD44E79488160 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-LoginApp With Brian/Pods-LoginApp With Brian-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LoginApp With Brian/Pods-LoginApp With Brian-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A6A40233CCC7051261DC115C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LoginApp With Brian/Pods-LoginApp With Brian-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		82AEEECF2010F50600F86512 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82AEEED92010F50600F86512 /* ViewController.swift in Sources */,
+				8279BF26202D91EA0081A1C8 /* ChatLogController.swift in Sources */,
+				820418922036B0090030FF5C /* Messages.swift in Sources */,
+				8223DF94201474DB0040A09D /* NewMessageController.swift in Sources */,
+				82AEEED92010F50600F86512 /* MessagesController.swift in Sources */,
+				82E52E3E2014833700485CD2 /* MyUser.swift in Sources */,
+				82AEEEE92010F96900F86512 /* LogInController.swift in Sources */,
+				822496162016B68F00F0B064 /* LogInController+Handler.swift in Sources */,
+				821A9730204B9F9100A5E5FF /* ChatMessageCell.swift in Sources */,
+				82289A08201F7FDC0047719C /* Extentsion.swift in Sources */,
+				82234F58203DD5BD00736646 /* UserCell.swift in Sources */,
 				82AEEED72010F50600F86512 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,11 +431,13 @@
 		};
 		82AEEEE62010F50600F86512 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 649B46DC404ACF46CC5BEFA8 /* Pods-LoginApp With Brian.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4QA6MH6558;
 				INFOPLIST_FILE = "LoginApp With Brian/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Pankaj-Sharma.LoginApp-With-Brian";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -287,11 +448,13 @@
 		};
 		82AEEEE72010F50600F86512 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 336F5133B51893126773CEE9 /* Pods-LoginApp With Brian.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4QA6MH6558;
 				INFOPLIST_FILE = "LoginApp With Brian/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Pankaj-Sharma.LoginApp-With-Brian";
 				PRODUCT_NAME = "$(TARGET_NAME)";
