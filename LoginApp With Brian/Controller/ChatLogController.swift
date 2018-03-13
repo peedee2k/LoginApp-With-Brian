@@ -38,6 +38,9 @@ class ChatLogController: UICollectionViewController, UITextFieldDelegate, UIColl
                 
                 DispatchQueue.main.async(execute: {
                     self.collectionView?.reloadData()
+                   let indexPath = IndexPath(item: self.messageArray.count - 1, section: 0)
+                    self.collectionView?.scrollToItem(at: indexPath, at: .bottom, animated: true)
+                    
                     })
             }, withCancel: nil)
         }, withCancel: nil)
@@ -179,8 +182,19 @@ class ChatLogController: UICollectionViewController, UITextFieldDelegate, UIColl
     }
     
     func setUpKeyboardObserver() {
-        NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-         NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardDidShow), name: Notification.Name.UIKeyboardDidShow, object: nil)
+        
+//        NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+//         NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+    }
+    
+    @objc func handleKeyboardDidShow() {
+        if messageArray.count > 0 {
+            let indexPath = IndexPath(item: messageArray.count - 1, section: 0)
+            collectionView?.scrollToItem(at: indexPath, at: .top, animated: true)
+        }
+        
     }
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
@@ -287,34 +301,22 @@ class ChatLogController: UICollectionViewController, UITextFieldDelegate, UIColl
     }
     
     @objc func handleSend() {
-        let ref = Database.database().reference().child("messages")
-        let childRef = ref.childByAutoId()
-        let toID = user!.id!
-        let fromID = Auth.auth().currentUser!.uid
-        let date = Date()
-        let timestamp = Int(date.timeIntervalSince1970)
-        let value: [String : Any] = ["text": inputTextField.text!, "toID": toID, "fromID": fromID, "timestamp": timestamp]
-       
-        childRef.updateChildValues(value) { (error, ref) in
-            if error != nil {
-                print(error!)
-                return
-            } else {
-                let userMessagesRef = Database.database().reference().child("user-messages").child(fromID).child(toID)
-                
-                let messageID = childRef.key
-                userMessagesRef.updateChildValues([messageID: 1])
-                
-                let recepiantUserMessasgesRef = Database.database().reference().child("user-messages").child(toID).child(fromID)
-                recepiantUserMessasgesRef.updateChildValues([messageID: 1])
+        if inputTextField.text != "" {
+            let properties: [String : Any] = ["text": inputTextField.text!]
+            sendMessageWithProperties(properties: properties)
             }
-        }
-            inputTextField.text = ""
+                inputTextField.text = ""
         }
     
     
     
     private func sendMessageWithImageURL(imageURL: String, image: UIImage) {
+        let properties : [String: Any] = ["imageURL": imageURL, "imageHeight": image.size.height  , "imagewidth": image.size.width]
+        
+        sendMessageWithProperties(properties: properties)
+    }
+    
+    private func sendMessageWithProperties(properties: [String: Any]) {
         
         let ref = Database.database().reference().child("messages")
         let childRef = ref.childByAutoId()
@@ -322,7 +324,11 @@ class ChatLogController: UICollectionViewController, UITextFieldDelegate, UIColl
         let fromID = Auth.auth().currentUser!.uid
         let date = Date()
         let timestamp = Int(date.timeIntervalSince1970)
-        let value: [String: Any] = ["toID": toID, "fromID": fromID, "timestamp": timestamp,"imageURL": imageURL,  "imageHeight": image.size.height, "imagewidth": image.size.width]
+        var value: [String: Any] = ["toID": toID, "fromID": fromID, "timestamp": timestamp]
+        
+        // append properties
+        // key = $0 and value = $1
+        properties.forEach { value[$0] = $1 }
         
         childRef.updateChildValues(value) { (error, ref) in
             if error != nil {
@@ -338,11 +344,6 @@ class ChatLogController: UICollectionViewController, UITextFieldDelegate, UIColl
                 recepiantUserMessasgesRef.updateChildValues([messageID: 1])
             }
         }
-        
-    }
-    
-    private func sendMessageWithProperties(properties: [String: AnyObject]) {
-        
         
     }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
