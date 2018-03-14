@@ -10,6 +10,10 @@ import UIKit
 
 class ChatMessageCell: UICollectionViewCell {
     
+    var chatLogController: ChatLogController?
+    
+    
+    
     var textView: UITextView = {
        var tv = UITextView()
         tv.text = "Sample Text"
@@ -44,16 +48,30 @@ class ChatMessageCell: UICollectionViewCell {
         return image
     }()
     
-    let messageImageView: UIImageView = {
+    lazy var messageImageView: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
         image.image = UIImage(named: "moon")
         image.contentMode = .scaleAspectFill
         image.layer.cornerRadius = 16
         image.layer.masksToBounds = true
+        image.isUserInteractionEnabled = true
+        image.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleZoomInImageview)))
+        
         
         return image
     }()
+    
+    @objc func handleZoomInImageview(gestureRecognizer: UITapGestureRecognizer) {
+    
+        if let imageView = gestureRecognizer.view as? UIImageView {
+            self.chatLogController?.performZoomInForStartingImageView(startingImageView: imageView)
+        }
+        
+        
+        
+        
+    }
     
     var bubbleWithAnchor: NSLayoutConstraint?
     var bubbleViewRightAnchor: NSLayoutConstraint?
